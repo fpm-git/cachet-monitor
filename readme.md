@@ -3,7 +3,7 @@ To update image and push to package repo
 ```
 git clone https://github.com/fpm-git/cachet-monitor.git
 cd cachet-monitor
-docker build -t docker.pkg.github.com/fpm-git/cachet-monitor-docker/cachet-monitor:<VERSION_NUMBER> .
+docker build -t docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER> .
 docker push docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER>
 ```
 
