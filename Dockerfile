@@ -19,4 +19,4 @@ RUN apk add --no-cache ca-certificates
 COPY --from=build-env /app/cachet-monitor /app/
 WORKDIR /app
 RUN chmod a+x cachet-monitor
-ENTRYPOINT ["/app/cachet-monitor","-c","config.yml"]
+ENTRYPOINT ["/app/cachet-monitor","-c","cachet-monitor.config.yml"]
