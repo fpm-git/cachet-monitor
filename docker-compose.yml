@@ -1,6 +1,0 @@
-version: '3'
-services:
-  cachet-monitor:
-    image: "cachet-monitor:test"
-    volumes:
-      - ./config.yml:/app/config.yml
