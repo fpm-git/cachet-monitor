@@ -56,7 +56,7 @@ func (incident *Incident) Send(cfg *CachetMonitor) error {
 		return err
 	}
 	if resp.StatusCode != 200 {
-		logrus.Warnf("resp: %v", resp)
+		logrus.Errorf("There is an error reguarding the API request. Printing var resp: %v", resp)
 		return fmt.Errorf("Cannot connect to cachet API")
     }
 
