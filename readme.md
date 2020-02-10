@@ -1,8 +1,15 @@
-To update image and push to package repo
+To update image and push to package repo.
+
+Currently setup on status-test, but can be done on other servers.
+
+if on new server:
+```
+go get github.com/fpm-git/cachet-monitor
+```
 
 ```
-git clone https://github.com/fpm-git/cachet-monitor.git
-cd cachet-monitor
+cd $GOPATH/src/github.com/fpm-git/cachet-monitor/
+git pull
 docker build -t docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER> .
 docker push docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER>
 ```
