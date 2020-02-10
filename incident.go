@@ -55,6 +55,10 @@ func (incident *Incident) Send(cfg *CachetMonitor) error {
 	if err != nil {
 		return err
 	}
+	if resp.StatusCode != 200 {
+		logrus.Warnf("resp: %v", resp)
+		return fmt.Errorf("Cannot connect to cachet API")
+    }
 
 	var data struct {
 		ID int `json:"id"`
