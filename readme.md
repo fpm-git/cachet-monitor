@@ -7,6 +7,7 @@ if on new server:
 go get github.com/fpm-git/cachet-monitor
 ```
 
+Then run:
 ```
 cd $GOPATH/src/github.com/fpm-git/cachet-monitor/
 git pull
