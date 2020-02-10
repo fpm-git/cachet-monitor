@@ -1,5 +1,5 @@
 FROM golang:alpine AS build-env
-ENV WORKDIR /go/src/github.com/castawaylabs/cachet-monitor
+ENV WORKDIR /go/src/github.com/fpm-git/cachet-monitor
 RUN mkdir -p ${WORKDIR}
 ADD . ${WORKDIR}
 WORKDIR ${WORKDIR}
