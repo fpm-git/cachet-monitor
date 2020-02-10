@@ -10,6 +10,7 @@ import (
 	"os/signal"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/Sirupsen/logrus"
 	cachet "github.com/castawaylabs/cachet-monitor"
@@ -82,6 +83,9 @@ func main() {
 	logrus.Infof("System: %s", cfg.SystemName)
 	logrus.Infof("API: %s", cfg.API.URL)
 	logrus.Infof("Monitors: %d\n", len(cfg.Monitors))
+	
+	logrus.Infof("Waiting for rest of system to come up")
+	time.Sleep(30 * time.Second)
 
 	logrus.Infof("Pinging cachet")
 	if err := cfg.API.Ping(); err != nil {
