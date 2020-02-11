@@ -42,7 +42,13 @@ func (incident *Incident) Send(cfg *CachetMonitor) error {
 		incident.ComponentStatus = 1
 	}
 
-	incident.Visible = cfg.RawMonitors[0]["visible"].(int)
+	number_of_monitors:=len(cfg.RawMonitors)
+	for i := 0; i < number_of_monitors; i++ {
+		if incident.ComponentID == cfg.RawMonitors[i]["component_id"]{
+			incident.Visible = cfg.RawMonitors[i]["visible"].(int)
+			break
+		}
+	}
 
 	requestType := "POST"
 	requestURL := "/incidents"
