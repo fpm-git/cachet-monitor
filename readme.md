@@ -9,11 +9,19 @@ go get github.com/fpm-git/cachet-monitor
 
 Then run:
 ```
+source ~/.bash_profile
 cd $GOPATH/src/github.com/fpm-git/cachet-monitor/
 git pull
 docker build -t docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER> .
 docker push docker.pkg.github.com/fpm-git/cachet-monitor/cachet-monitor:<VERSION_NUMBER>
 ```
+
+
+
+
+
+
+
 
 
 
